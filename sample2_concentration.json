@@ -1,0 +1,83 @@
+{
+  "document_id": "sample2_concentration",
+  "section": "SECTION 7.3 PORTFOLIO CONCENTRATION LIMITS",
+  "extracted_at": "2026-06-02T21:48:46.786011+00:00",
+  "extraction_method": "regex",
+  "rules": [
+    {
+      "rule_id": "sample2_concentration-i",
+      "rule_type": "concentration_limit",
+      "subject": "portfolio_concentration",
+      "metric": "portfolio_concentration",
+      "operator": "lte",
+      "threshold": "25%",
+      "threshold_unit": "%",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "portfolio",
+      "enforcement": "hard_limit",
+      "raw_text": "No more than 25% of the total portfolio value shall consist of policies originating from any single state."
+    },
+    {
+      "rule_id": "sample2_concentration-ii",
+      "rule_type": "concentration_limit",
+      "subject": "coverage_amount",
+      "metric": "coverage_amount",
+      "operator": "lte",
+      "threshold": "10%",
+      "threshold_unit": "%",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": "$1,500,000",
+      "applies_to": "portfolio",
+      "enforcement": "hard_limit",
+      "raw_text": "No more than 10% of the total portfolio value shall consist of policies with a coverage amount exceeding $1,500,000."
+    },
+    {
+      "rule_id": "sample2_concentration-iii",
+      "rule_type": "concentration_limit",
+      "subject": "credit_score",
+      "metric": "credit_score",
+      "operator": "gte",
+      "threshold": "720",
+      "threshold_unit": null,
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "portfolio",
+      "enforcement": "hard_limit",
+      "raw_text": "The weighted average credit score across all policies in the portfolio shall not be less than 720."
+    },
+    {
+      "rule_id": "sample2_concentration-iv",
+      "rule_type": "concentration_limit",
+      "subject": "portfolio_concentration",
+      "metric": "portfolio_concentration",
+      "operator": "lte",
+      "threshold": "5%",
+      "threshold_unit": "%",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": "25",
+      "applies_to": "portfolio",
+      "enforcement": "hard_limit",
+      "raw_text": "No more than 5% of the total portfolio value shall consist of policies where the primary applicant is under 25 years of age."
+    },
+    {
+      "rule_id": "sample2_concentration-v",
+      "rule_type": "concentration_limit",
+      "subject": "debt_to_income_ratio",
+      "metric": "debt_to_income_ratio",
+      "operator": "lte",
+      "threshold": "35%",
+      "threshold_unit": "%",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "portfolio",
+      "enforcement": "hard_limit",
+      "raw_text": "The weighted average debt-to-income ratio shall not exceed 35%."
+    }
+  ]
+}

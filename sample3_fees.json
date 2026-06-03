@@ -1,0 +1,83 @@
+{
+  "document_id": "sample3_fees",
+  "section": "SECTION 12.2 FEES AND CHARGES",
+  "extracted_at": "2026-06-02T21:48:46.787476+00:00",
+  "extraction_method": "regex",
+  "rules": [
+    {
+      "rule_id": "sample3_fees-a",
+      "rule_type": "fee",
+      "subject": "fee_amount",
+      "metric": "fee_amount",
+      "operator": "lte",
+      "threshold": "$500",
+      "threshold_unit": "USD",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "fee_trigger",
+      "enforcement": "fee",
+      "raw_text": "Processing Fee: A one-time fee of $500 per application, due upon submission."
+    },
+    {
+      "rule_id": "sample3_fees-b",
+      "rule_type": "fee",
+      "subject": "coverage_amount",
+      "metric": "coverage_amount",
+      "operator": "gt",
+      "threshold": "0.35%",
+      "threshold_unit": "%",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "fee_trigger",
+      "enforcement": "fee",
+      "raw_text": "Annual Service Fee: 0.35% per annum of the outstanding coverage amount, payable monthly."
+    },
+    {
+      "rule_id": "sample3_fees-c",
+      "rule_type": "fee",
+      "subject": "overdue_payment_days",
+      "metric": "overdue_payment_days",
+      "operator": "gt",
+      "threshold": "15",
+      "threshold_unit": "days",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": "2%",
+      "applies_to": "fee_trigger",
+      "enforcement": "fee",
+      "raw_text": "Late Payment Fee: If any scheduled payment is more than 15 days overdue, a fee of 2% of the overdue amount shall apply, subject to a minimum of $25 and a maximum of $500."
+    },
+    {
+      "rule_id": "sample3_fees-d",
+      "rule_type": "fee",
+      "subject": "fee_amount",
+      "metric": "fee_amount",
+      "operator": "eq",
+      "threshold": "24",
+      "threshold_unit": "months",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": "3",
+      "applies_to": "fee_trigger",
+      "enforcement": "fee",
+      "raw_text": "Early Termination Fee: If the policy is cancelled within the first 24 months, the applicant shall pay a fee equal to 3 months of the annual service fee."
+    },
+    {
+      "rule_id": "sample3_fees-e",
+      "rule_type": "fee",
+      "subject": "fee_amount",
+      "metric": "fee_amount",
+      "operator": "gt",
+      "threshold": "$250",
+      "threshold_unit": "USD",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": "60",
+      "applies_to": "fee_trigger",
+      "enforcement": "fee",
+      "raw_text": "Reinstatement Fee: $250 if the policy is reinstated after a lapse of more than 60 days."
+    }
+  ]
+}

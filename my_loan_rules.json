@@ -1,0 +1,70 @@
+{
+  "document_id": "my_loan_rules",
+  "section": "SECTION 3.1 LOAN ELIGIBILITY",
+  "extracted_at": "2026-06-02T23:30:28.045853+00:00",
+  "extraction_method": "regex",
+  "rules": [
+    {
+      "rule_id": "my_loan_rules-a",
+      "rule_type": "eligibility",
+      "subject": "policy_rule",
+      "metric": "policy_rule",
+      "operator": "gte",
+      "threshold": "18",
+      "threshold_unit": null,
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "The applicant must be at least 18 years old."
+    },
+    {
+      "rule_id": "my_loan_rules-b",
+      "rule_type": "eligibility",
+      "subject": "annual_income",
+      "metric": "annual_income",
+      "operator": "gte",
+      "threshold": "$3,000",
+      "threshold_unit": "USD",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "Monthly income must be at least $3,000."
+    },
+    {
+      "rule_id": "my_loan_rules-c",
+      "rule_type": "eligibility",
+      "subject": "policy_rule",
+      "metric": "policy_rule",
+      "operator": "lte",
+      "threshold": "$50,000",
+      "threshold_unit": "USD",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "The loan amount shall not exceed $50,000."
+    },
+    {
+      "rule_id": "my_loan_rules-d",
+      "rule_type": "eligibility",
+      "subject": "credit_score",
+      "metric": "credit_score",
+      "operator": "gt",
+      "threshold": "700,",
+      "threshold_unit": null,
+      "condition": null,
+      "exceptions": [
+        "if a guarantor is provided: 680"
+      ],
+      "alternate_threshold": "680",
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "Credit score must be above 700, or 680 if a guarantor is provided."
+    }
+  ]
+}

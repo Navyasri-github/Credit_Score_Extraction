@@ -1,0 +1,117 @@
+{
+  "document_id": "sample1_eligibility",
+  "section": "SECTION 5.1 ELIGIBILITY CRITERIA",
+  "extracted_at": "2026-06-02T21:48:46.785014+00:00",
+  "extraction_method": "regex",
+  "rules": [
+    {
+      "rule_id": "sample1_eligibility-a",
+      "rule_type": "eligibility",
+      "subject": "credit_score",
+      "metric": "credit_score",
+      "operator": "gte",
+      "threshold": "680",
+      "threshold_unit": null,
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "Each applicant must have a credit score of at least 680."
+    },
+    {
+      "rule_id": "sample1_eligibility-b",
+      "rule_type": "eligibility",
+      "subject": "coverage_amount",
+      "metric": "coverage_amount",
+      "operator": "lte",
+      "threshold": "$2,000,000",
+      "threshold_unit": "USD",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "The maximum coverage amount for any single policy shall not exceed $2,000,000."
+    },
+    {
+      "rule_id": "sample1_eligibility-c",
+      "rule_type": "eligibility",
+      "subject": "credit_score",
+      "metric": "credit_score",
+      "operator": "gte",
+      "threshold": "680,",
+      "threshold_unit": null,
+      "condition": "no more than 15% of the total portfolio value may consist of policies for applicants with credit scores between 680 and 700.",
+      "exceptions": [],
+      "alternate_threshold": "15%",
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "The applicant must have a credit score of at least 680, provided that no more than 15% of the total portfolio value may consist of policies for applicants with credit scores between 680 and 700."
+    },
+    {
+      "rule_id": "sample1_eligibility-d",
+      "rule_type": "eligibility",
+      "subject": "credit_score",
+      "metric": "credit_score",
+      "operator": "lte",
+      "threshold": "40%",
+      "threshold_unit": "%",
+      "condition": null,
+      "exceptions": [
+        "if the applicant has a co-signer with a credit score above 750: 45%"
+      ],
+      "alternate_threshold": "45%",
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "The debt-to-income ratio shall not exceed 40%, or 45% if the applicant has a co-signer with a credit score above 750."
+    },
+    {
+      "rule_id": "sample1_eligibility-e",
+      "rule_type": "eligibility",
+      "subject": "overdue_payment_days",
+      "metric": "overdue_payment_days",
+      "operator": "gt",
+      "threshold": "30",
+      "threshold_unit": "days",
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "The applicant must not have any payment more than 30 days overdue as of the Review Date."
+    },
+    {
+      "rule_id": "sample1_eligibility-f",
+      "rule_type": "eligibility",
+      "subject": "policy_rule",
+      "metric": "policy_rule",
+      "operator": "lte",
+      "threshold": null,
+      "threshold_unit": null,
+      "condition": null,
+      "exceptions": [],
+      "alternate_threshold": null,
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "The applicant must reside in the United States or its territories."
+    },
+    {
+      "rule_id": "sample1_eligibility-g",
+      "rule_type": "eligibility",
+      "subject": "annual_income",
+      "metric": "annual_income",
+      "operator": "lt",
+      "threshold": "$35,000,",
+      "threshold_unit": "USD",
+      "condition": null,
+      "exceptions": [
+        "the applicant is enrolled in an approved assistance program"
+      ],
+      "alternate_threshold": "$25,000",
+      "applies_to": "applicant",
+      "enforcement": "hard_limit",
+      "raw_text": "No applicant shall have an annual income below $35,000, unless the applicant is enrolled in an approved assistance program, in which case the minimum income shall be $25,000."
+    }
+  ]
+}
